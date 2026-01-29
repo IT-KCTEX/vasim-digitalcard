@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vasim | KCTEX International Ltd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #1f7a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 26px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border: 1px solid #e5e5e5;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1f7a1f;
+}
+
+h2 {
+    margin: 6px 0 16px;
+    font-size: 16px;
+    color: #2e8b57;
+    font-weight: bold;
+}
+
+.company {
+    font-weight: bold;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    color: #1f7a1f;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    background: #2e8b57;
+    color: white;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.whatsapp {
+    background: #2e8b57;
+}
+
+.address {
+    font-size: 14px;
+    margin-top: 16px;
+    color: #1f7a1f;
+    line-height: 1.4;
+}
+.address-map {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.map-thumb {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.map-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.map-full {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+
+.name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name-row img {
+    height: 55px;
+    margin-left: 10px;
+}
+
+.dept-banner {
+    margin-top: 22px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.dept-banner img {
+    width: 100%;
+    height: 26px;
+	object-fit: cover;
+    display: block;
+    animation: slideIn 1.2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div class="card">
+    <div class="name-row">
+        <h1></h1>
+        <img src="kctex-logo.png" alt="KCTEX Logo">
+    </div>
+
+    <h2>Vasimkhan<br>IT MANAGER</h2>
+
+    <a class="button" href="tel:+6591173319">📞 Call +65 83227494</a>
+    <a class="button whatsapp" href="https://wa.me/6583227494" target="_blank">💬 Chat on WhatsApp</a>
+    <a class="button" href="mailto:sys@kctex.com.sg">✉️ Email Vasim</a>
+    <a class="button" href="Vasim_KCTEX.vcf">💾 Save Contact</a>
+	<div class="address-map">
+    <div class="address">
+		KCTEX International Ltd<br>
+        6 Shenton Way, #07-09<br>
+        OUE Downtown 2<br>
+        Singapore 068809
+		<a class="address" href="https://kctexinternational.com/" target="_blank" style="color: #0000EE;">www.kctexinternational.com</a>
+    </div>
+
+    <img src="map.png" alt="Map" class="map-thumb" onclick="openMap()">
+</div>
+
+<div class="map-overlay" id="mapOverlay" onclick="closeMap()">
+    <img src="map.png" class="map-full">
+</div>
+
+<div class="dept-banner">
+    <img src="dept.png" alt="Department">
+</div>
+
+</div>
+<script>
+function openMap() {
+    document.getElementById("mapOverlay").style.display = "flex";
+}
+
+function closeMap() {
+    document.getElementById("mapOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
